@@ -1,3 +1,13 @@
+Custom radProgrammer fork.  No anticipated logic changes to be implemented in this fork. 
+Recommended only for radProgrammer projects - use the parent fork.
+
+Customizations:
+
+- `tools/open-repo.bat`:  Standard simple utility to allow click-to-open repo functionality
+
+
+---
+
 <p align="center">
   <img src="assets/branding/logo.svg" width="160" alt="SimpleBaseLib4Pascal logo" />
   <h1 align="center">SimpleBaseLib4Pascal</h1>
@@ -13,6 +23,7 @@
 </p>
 
 ---
+
 
 SimpleBaseLib4Pascal is a base encoding/decoding library for Object Pascal with support for multiple base families, non-allocating APIs, and stream-based APIs across Delphi and FreePascal.
 
