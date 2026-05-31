@@ -1,10 +1,17 @@
-Custom radProgrammer fork.  No anticipated logic changes to be implemented in this fork. 
-Recommended only for radProgrammer projects - use the parent fork.
+Custom radProgrammer fork.  No anticipated logic changes to be implemented in this fork.
+
+Recommended only for radProgrammer projects - others should use the parent fork instead.
 
 Customizations:
 
 - `tools/open-repo.bat`:  Standard simple utility to allow click-to-open repo functionality
-
+- Extended `.gitignore`
+- Added `.gitattributes`
+- Added .dproj file for VER370
+  - Configured release builds paths for DCP + Unit output directory to `
+$(BDSUSERDIR)\Imports\$(Platform)`
+  - Manually built Win32+Win64 release builds
+  - Default output path set to `.\$(Platform)\$(Config)` if needing to debug
 
 ---
 
