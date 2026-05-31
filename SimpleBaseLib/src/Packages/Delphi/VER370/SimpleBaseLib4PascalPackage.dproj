@@ -1,0 +1,228 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Base>True</Base>
+        <AppType>Package</AppType>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <FrameworkType>None</FrameworkType>
+        <MainSource>SimpleBaseLib4PascalPackage.dpk</MainSource>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <ProjectGuid>{7936E4EF-3CF4-4425-AB67-3275535120FD}</ProjectGuid>
+        <ProjectName Condition="'$(ProjectName)'==''">SimpleBaseLib4PascalPackage</ProjectName>
+        <ProjectVersion>20.4</ProjectVersion>
+        <TargetedPlatforms>3</TargetedPlatforms>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>SimpleBaseLib4PascalPackage</SanitizedProjectName>
+        <DCC_DcpOutput>.\$(Platform)\$(Config)</DCC_DcpOutput>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DllSuffix>$(Auto)</DllSuffix>
+        <GenDll>true</GenDll>
+        <GenPackage>true</GenPackage>
+        <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <BT_BuildType>Debug</BT_BuildType>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <BT_BuildType>Debug</BT_BuildType>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_DcpOutput>$(BDSUSERDIR)\Imports\$(Platform)</DCC_DcpOutput>
+        <DCC_DcuOutput>$(BDSUSERDIR)\Imports\$(Platform)</DCC_DcuOutput>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="rtl.dcp"/>
+        <DCCReference Include="..\..\..\Misc\SbpBitOperations.pas"/>
+        <DCCReference Include="..\..\..\Misc\SbpBinaryPrimitives.pas"/>
+        <DCCReference Include="..\..\..\Misc\SbpSimpleBaseLibTypes.pas"/>
+        <DCCReference Include="..\..\..\Misc\SbpBits.pas"/>
+        <DCCReference Include="..\..\..\Utilities\SbpCharUtilities.pas"/>
+        <DCCReference Include="..\..\..\Utilities\SbpStreamUtilities.pas"/>
+        <DCCReference Include="..\..\..\Utilities\SbpArrayUtilities.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase16Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpCodingAlphabet.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase16.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase16Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpICodingAlphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase16.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Coders\SbpIBaseCoder.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Coders\SbpIBaseStreamCoder.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Coders\SbpINonAllocatingBaseCoder.pas"/>
+        <DCCReference Include="..\..\..\Coders\SbpDividingCoder.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Coders\SbpIDividingCoder.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase10Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase36Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase62Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase2.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase8.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase10.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase36.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase62.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase10Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase36Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase62Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase2.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase8.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase10.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase36.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase62.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase58Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase58.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpMoneroBase58.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase58Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase58.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIMoneroBase58.pas"/>
+        <DCCReference Include="..\..\..\Misc\SbpSimpleBaseLibConstants.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase45Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase45.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase45Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase45.pas"/>
+        <DCCReference Include="..\..\..\Utilities\SbpPlatformUtilities.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpAliasedBase32Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase32Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase32.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase32.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase32Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIAliasedBase32Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Misc\SbpCharMap.pas"/>
+        <DCCReference Include="..\..\..\Misc\SbpPaddingPosition.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Coders\SbpINumericBaseCoder.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase85Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase85.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase85Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase85.pas"/>
+        <DCCReference Include="..\..\..\Alphabets\SbpBase64Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Alphabets\SbpIBase64Alphabet.pas"/>
+        <DCCReference Include="..\..\..\Interfaces\Bases\SbpIBase64.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpBase64.pas"/>
+        <DCCReference Include="..\..\..\Bases\SbpMultibase.pas"/>
+        <DCCReference Include="..\..\..\Misc\SbpMultibaseEncoding.pas"/>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Package</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">SimpleBaseLib4PascalPackage.dpk</Source>
+                </Source>
+                <Excluded_Packages/>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Android">False</Platform>
+                <Platform value="Android64">False</Platform>
+                <Platform value="Linux64">False</Platform>
+                <Platform value="OSX64">False</Platform>
+                <Platform value="OSXARM64">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">True</Platform>
+                <Platform value="Win64x">False</Platform>
+                <Platform value="WinARM64EC">False</Platform>
+                <Platform value="iOSDevice64">False</Platform>
+                <Platform value="iOSSimARM64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>
